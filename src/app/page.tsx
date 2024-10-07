@@ -1,0 +1,9 @@
+import { ActiveLabel } from "./components/active-label";
+
+export default function Home() {
+  return <div>
+      <h1>Home page</h1>
+      <ActiveLabel>Active</ActiveLabel>
+        </div>
+ 
+}
