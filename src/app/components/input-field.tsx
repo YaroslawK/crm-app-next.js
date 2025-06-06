@@ -1,0 +1,13 @@
+'use client';
+import { Field } from 'formik';
+import React from 'react';
+
+export interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+ label?: string;
+}
+
+export const InputField = ({label, id, ...res}:InputFieldProps) => {
+ return (<>
+     <div className='flex flex-col'>{label && (<label htmlFor={id} className='mb-2 text-base color-gray-900'>{label}</label>)}</div>
+     <Field {...res} id={id} className='p-3 h-11 text-sm rounded border border-gray-300 shadow'></Field></>
+)}

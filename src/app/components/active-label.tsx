@@ -10,11 +10,15 @@ export enum Status {
 
 export interface StatusLabelProps {
   children: React.ReactNode;
-    status: Status;
-    disabled?: boolean
+  status: Status;
+  disabled?: boolean;
 }
 
-export const StatusLabel = ({ children, status, disabled }: StatusLabelProps) => {
+export const StatusLabel = ({
+  children,
+  status,
+  disabled,
+}: StatusLabelProps) => {
   return (
     <div
       className={clsx(
@@ -26,8 +30,9 @@ export const StatusLabel = ({ children, status, disabled }: StatusLabelProps) =>
         {
           ['opacity-75 cursor-not-allowed']: disabled,
         },
-      )}>
-          <div className="w-1 h-1 mr-2 rounded-full bg-current"></div>
+      )}
+    >
+      <div className="w-1 h-1 mr-2 rounded-full bg-current"></div>
       {children}
     </div>
   );
